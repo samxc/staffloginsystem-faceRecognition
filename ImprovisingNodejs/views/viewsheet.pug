@@ -1,0 +1,15 @@
+extends Hompage
+
+block sidebar
+    .form-container-viewsheet
+      .form-group-login-viewsheet
+         h1 Please Enter the name of the Staff
+         br
+         form(action='')
+          input(type='text' id='username' name='name' placeholder='Fullname')
+          button(type='submit') Search
+          br
+          textarea(id='data-sheets' rows=10 cols=1)
+          br
+          a(href="/Roster") create timesheet ?
+          script(src='/js/viewTimesheet.js')

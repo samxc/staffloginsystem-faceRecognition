@@ -1,0 +1,17 @@
+extends base
+
+block content
+    .form-container 
+      .form-group-login
+         h1 Login to ActiveScan
+         br
+         form(action='')
+          input(type='email' id='email' name='email' placeholder='email@email.com')
+          br
+          input(type='password' id='password' name='password' placeholder='password')
+          br
+          button(type='submit' href='/registration') Login
+          br
+          a(href="/registration") Forgot Password ?
+          script(src='/js/login.js')
+         

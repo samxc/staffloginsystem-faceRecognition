@@ -1,0 +1,32 @@
+extends Hompage
+
+block sidebar 
+    .main-div-timesheet
+      .form-group-timesheet
+         h1 Assign A New TimeSheet
+         br
+         form(action='')
+          input(type='text' id='fullname' name='user' placeholder='Fullname')
+          i(class="glyphicon glyphicon-user" id="person-icon")
+          br
+          select(id='Days-name' name='day')
+            option(value='Monday') Monday
+            option(value='Tuesday') Tuesday
+            option(value='Wednesday') Wednesday 
+            option(value='Thursday') Thursday
+            option(value='Friday') Friday
+            option(value='Saturday') Saturday
+            option(value='Sunday') Sunday
+          br
+          label(for="StartDate" id="label-start-date") Start-Date-Time:
+          input(type="datetime-local" id="StartDate" name="Startdate")
+          br
+          label(for="EndDate" id="label-end-date") End-Date-Time:
+          input(type="datetime-local" id="EndDate" name="Enddate")
+          br
+          select(id='Task-name' name='task')
+            option(value='Kitchen') Kitchen
+            option(value='Front') Front
+          br
+          button(type='submit') Add
+          script(src="/js/timesheetAssign.js")

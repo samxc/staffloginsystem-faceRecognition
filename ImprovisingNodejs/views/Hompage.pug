@@ -1,0 +1,18 @@
+extends base
+block content
+      .profile-container-body
+        .nav-bar-div
+          ul
+           li
+            a(class='active' href="/activeusers") ActivePage
+           li
+            a(class='time-sheet' href="/Roster") TimeSheet
+           li
+            a(class='view-sheet' href="/viewsheets" style="color: white") viewsheets
+           li
+            a(class='Profile' href="#profile" style="color: white") Profile
+           li
+            a(class='Logout' href="/logout" style="color: white") logout
+        .body-info-container
+            block sidebar
+            

@@ -1,0 +1,47 @@
+extends base
+
+block content
+    .form-container 
+      .form-group
+         h1 Register to ActiveScan
+         br
+         form(action='' enctype='multipart/form-data')
+          input(type='text' id='fname' name='firstname' placeholder='First Name')
+          br
+          input(type='text' id='lname' name='lastname' placeholder='Last Name')
+          br
+          input(type='email' id='email' name='email' placeholder='email@email.com')
+          br
+          input(type='password' id='password' name='password' placeholder='password')
+          br
+          input(type='password' id='Confirmpassword' name='Confirmpassword' placeholder='confirm-password')
+          br
+          input(type='radio' id='admin' name='role' value='admin')
+          | 
+          span Admin
+          | 
+          input(type='radio' id='user' name='role' value='user')
+          | 
+          span User
+          br
+          input(type='file' id='file-upload' name='Files' multiple accept='images/*')
+          br
+          span Upload your face-model here
+          br
+          button(type='submit') Signup
+          script(src='/js/register.js')
+          script(src='/js/passImages.js')   
+      .facescan-vframe(id='vframe') 
+         script(type='text/javascript' src='/js/captureImage.js')
+         video( id='capture-image' width='600' height='470' autoplay muted)
+         br
+         canvas(id='canvas-capture' height="600" width="470")
+         br
+         button(id="snap")
+          i(class="fa fa-camera")
+         
+
+
+        
+
+
