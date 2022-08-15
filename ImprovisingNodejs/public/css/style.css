@@ -1,1 +1,471 @@
+* {
+	box-sizing: border-box;
+}
+
+canvas {
+    position: absolute;
+}
+
+#canvas-capture{
+    position: absolute;
+    display: none;
+}
+#snap{
+    background-color: rgb(49, 181, 230);
+    position: relative;
+    margin-top: 340px;
+    margin-left: 20px;
+    height: 85px;
+    border-radius: 50%;
+    border: 2px solid;
+    border-color: white;
+}
+
+a:link{
+    color: rgb(0, 183, 255);
+}
+
+a:hover{
+    color: greenyellow;
+}
+
+video {
+    border-radius: 15px;
+    border-style: outset;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+h1{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.form-container{
+    margin: 30px;
+    display: flex;
+    position: center;
+    flex-direction: row;
+    background-color: rgb(97, 188, 241);
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/*For Timesheet page, form field css*/
+#StartDate{
+    outline: none;
+    border: none;
+    border-bottom: 2px solid darkgray;
+    width: 100%;
+    height: 40px;
+}
+
+#EndDate{
+    border: none;
+    border-bottom: 2px solid darkgray;
+    width: 100%;
+    height: 40px;
+    outline: none;
+}
+
+#label-start-date{
+    outline: none;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 11px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+#label-end-date{
+    outline:none;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 11px;
+    font-family:'Times New Roman', Times, serif;
+}
+#Days-name{
+    border: none;
+    border-bottom: 2px solid darkgray;
+    width: 100%;
+    height: 40px;
+    outline: none;
+}
+#Task-name{
+    border: none;
+    border-bottom: 2px solid darkgray;
+    width: 100%;
+    height: 40px;
+    outline: none;
+}
+
+#person-icon{
+    float: right;
+    margin-top: -26px;
+    margin-right: 4px;
+}
+
+
+
+/*For all the forms and divisions used in body*/
+.form-group{
+    display: relative;
+    margin-top: 15px;
+    height: 500px;
+    width: 50%;
+    padding: 50px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form-group-login{
+    display: relative;
+    margin-top: 15px;
+    height: 500px;
+    width: 50%;
+    padding: 50px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.main-div-timesheet{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    margin-left: 150px;
+    background-color: white;
+}
+
+.form-group-timesheet{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 60vh;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.facescan-vframe{
+    display: flex;
+    background-color: rgb(3, 118, 171);
+    height: 500px;
+    width: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.facescan-vframe-activeUser{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#users{
+    margin: 20px;
+    padding: 5px;
+}
+
+#users li{
+    background-color:#0088f8;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+textarea{
+    margin: 50px;
+    height: 30vh;
+    width: 90%;
+    border: 1px solid black;
+    border-style: none;
+    overflow: scroll;
+}
+input[type=text], input[type=password] {
+    border: none;
+    padding: 10px;
+    border-bottom: 2px solid darkgray;
+    width: 100%;
+    height: 40px;
+    outline: none;
+}
+
+input[type=email] {
+    border: none;
+    padding: 10px;
+    border-bottom: 2px solid darkgray; 
+    width: 100%;
+    height: 40px;
+    outline: none;
+}
+
+button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: rgb(107, 180, 209);
+    color: black;
+}
+
+
+
+
+
+
+
+/*This one is for Fileupload and capture Image*/
+
+#file-upload{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.btnPhoto{
+    background-color: #ffec41;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+/* Home page edit only body CSS Below */
+
+.profile-container-head{
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.middle-div-User-Info-head{
+    padding: 10px;
+    background-color: rgb(16, 156, 190);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.profile-container-body{
+    padding:0;
+    margin: 0;
+    border-top: 2px solid white;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(16, 156, 190);
+    height: 100vh;
+    width: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.nav-bar-div{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 20%;
+}
+
+.body-info-container{
+    width: 70%;
+    height: 100%;
+    border-left: 1px solid white;
+}
+
+ul {
+    list-style-type: none;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: white;
+    height: 100%;
+}
+
+li{
+    margin: 10px;
+    padding: 10px;
+}
+
+li a {
+    display: block;
+    margin-top: 3px;
+    border-radius: 10px;
+    background-color: rgb(16, 156, 190);
+    color: white;
+    padding: 20px 12px;
+    text-decoration: none;
+}
+  
+li a:hover {
+    border-radius: 10px;
+    background-color: #0088f8;
+    color: black;
+}
+
+
+/*This is for vewing sheets*/
+.form-container-viewsheet{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    margin-left: 150px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.form-group-login-viewsheet{
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+
+
+/*Header css for all the pages*/
+
+#logo-label{
+    float: right;
+    margin-top: 36px;
+    margin-right:10px;
+    color: white;
+}
+
+#name-user{
+    float: right;
+    margin-top: 36px;
+    margin-right:10px;
+    color: white;
+}
+
+#date-today{
+    float: right;
+    margin-top: 36px;
+    margin-right:10px;
+    color: white;
+}
+
+.div-header{
+    padding:0;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 200px;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(16, 156, 190);
+}
+
+.Imagein{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    float: right;
+    margin: 20px;
+}
+
+
+
+/*This is new code done seperately*/
+
+/*For header*/
+
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+/*This line of css code is for the profile picture,username and other info that should be displayed accodrding to the page loaded*/
+
+.profile-main-div{
+	background-color: blue;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	height: 18vh;
+	overflow: auto;
+}
+.profile-container{
+	background-color: rgb(16, 156, 190);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	flex-grow: 1;
+	height: 18vh;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.profile-container-div1{
+	background-color: none;
+	display: flex;
+	margin-right: 10px;
+	align-items: center;
+}
+
+.profile-container-div2{
+	background-color: none;
+	margin-right: 30px;
+	display: flex;
+	align-items: center;
+}
+
+.profileImage{
+	border-radius: 50%;
+    border: 2px solid white;
+}
+
+
+
+/*This line of code is for the Header pages name, each name should change with loaded page name.*/
+
+.profile-naming-container{
+	background-color: rgb(16, 156, 190);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	flex-grow: 1;
+	height: 18vh;
+    color: white;
+}
+
+.profile-naming-container-div1{
+	background-color: none;
+	display: flex;
+	margin-left: 30px;
+	align-items: center;
+	font-size: 40px;
+}
 
